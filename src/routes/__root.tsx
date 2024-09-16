@@ -1,6 +1,5 @@
-import * as React from 'react'
-import { Link, Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { Link, Outlet, createRootRoute } from "@tanstack/react-router"
+import { TanStackRouterDevtools } from "@tanstack/router-devtools"
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -13,19 +12,35 @@ function RootComponent() {
         <Link
           to="/"
           activeProps={{
-            className: 'font-bold',
+            className: "font-bold",
           }}
           activeOptions={{ exact: true }}
         >
           Home
-        </Link>{' '}
+        </Link>{" "}
         <Link
           to="/about"
           activeProps={{
-            className: 'font-bold',
+            className: "font-bold",
           }}
         >
           About
+        </Link>
+        <Link
+          to="/help"
+          activeProps={{
+            className: "font-bold",
+          }}
+        >
+          HELP
+        </Link>
+        <Link
+          to="/news"
+          activeProps={{
+            className: "font-bold",
+          }}
+        >
+          News
         </Link>
       </div>
       <hr />
